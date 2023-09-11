@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LTO</title>
+
+  <link rel="stylesheet" href="lto.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,500;0,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="cont">
+    <div class="header">
+      <div>
+        <img src="ph.png" width="100px">
+      </div>
+      <div>
+        <h4>REPUBLIC OF THE PHILIPPINES <br>
+          DEPARTMENT OF TRANSPORTATION & COMMUNICATIONS <br>
+          LAND TRANSPORTATION OFFICE <br> 
+          <span class="loc">East Avenue, Quezon City</span>
+        </h4>
+      </div>
+      <div>
+        <img src="lto.png" width="100px">
+      </div>
+    </div>
+
+    <div class="title">
+      <h3>APPLICATION FOR DRIVER'S LICENSE</h3>
+    </div>
+
+    <form id="registration" method="post">
+
+        <section class="name">
+            <b>APPLICANT'S FULL NAME</b>
+            <input id="familyName" name="familyName" type="text" placeholder="Family Name">
+            <input id="firstName" name="firstName" type="text" placeholder="First Name">
+            <input id="middleName" name="middleName" type="text" placeholder="Middle Name">
+        </section>
+
+        <section class="address">
+            <b>PRESENT ADDRESS</b>
+            <input id="streetNum" name="streetNum" type="text" placeholder="Street Number">
+            <input id="street" name="street" type="text" placeholder="Street Name">
+              <select id="provinceSelect" name="province">
+                <option value="">Select Province</option>
+                <option value="Batangas">Batangas</option>
+                <option value="Cavite">Cavite</option>
+                <option value="Laguna">Laguna</option>
+                <option value="Quezon">Quezon</option>
+                <option value="Rizal">Rizal</option>
+                <option value="Metropolitan Manila">Metropolitan Manila</option>
+              </select>  
+              <select id="citySelect" name="city">
+                <option value="">Select a province first</option>
+              </select> 
+        </section>
+
+        <section class="numbers">
+            <label for="tel"><b>TELEPHONE NO.</b></label> 
+            <input id="tel" name="tel" type="tel" pattern="[0-9]{3}-[0-9]{4}" placeholder="XXX-XXXX"> <br>
+            <label for="cel"><b>CELLPHONE NO.</b></label> 
+            <input id="cel" name="cel" type="tel" pattern="[0]{1}[9]{1}[0-9]{2}-[0-9]{3}-[0-9]{4}" placeholder="09XX-XXX-XXXX"> <br>
+            <label for="tin"><b>TIN</b></label> 
+            <input id="tin" name="tin" type="text" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0]{5}" placeholder="XXX-XXX-XXX-00000">
+        </section>
+
+      <section class="details">
+        <b>NATIONALITY</b>
+        <div class="nation">
+          <div>
+            <input id="filipino" name="option" type="radio" placeholder="Filipino">
+            <label for="option">FILIPINO</label>
+          </div>
+          <input id="foreigner" name="option" type="radio" placeholder="Foreigner">
+          <label for="option">FOREIGNER</label>
+        </div>
+        <div id="nationalityInput" style="display: none;">
+          <input id="nationality" name="nationality" type="text" placeholder="Specify Nationality">
+        </div>
+        
+        <br>
+        <b>GENDER</b>
+        <div class="gender">
+          <div>
+            <input id="gender" name="gender" type="radio" placeholder="Female">
+            <label for="gender">FEMALE</label>
+          </div>
+            <input id="gender" name="gender" type="radio" placeholder="Male">
+            <label for="graduate">MALE</label>
+        </div>
+        <br>
+        
+        <label for="bday"><b>BIRTH DATE</b></label> 
+        <input id="bday" name="bday" type="date" min="1920-01-01" max="2007-12-31">
+        <br>
+        <label for="height"><b>HEIGHT</b></label> 
+        <input id="height" name="height" type="text" placeholder="(in cm)" pattern="[0-9]{3}">
+        <br>
+        <label for="weight"><b>WEIGHT</b></label> 
+        (in kg)
+        <input id="weight" name="weight" type="text" placeholder="(in kg)" pattern="[0-9]{3}">
+      </section>
+
+      <section class="toa">
+        <label><b>TYPE OF APPLICATION</b></label>
+        <div>
+          <div>
+            <input id="new" name="toa" type="checkbox" value="new">
+            <label for="toa">A. NEW</label>
+          </div>
+          <br>
+          <div>
+            <input id="deldor" name="toa" type="checkbox" value="delinquent/dormant">
+            <label for="toa">B. DELINQUENT/DORMANT LICENSE</label>
+          </div>
+          <br>
+          <div>
+            <input id="classification" name="toa" type="checkbox" value="change of classification">
+            <label>C. CHANGE OF CLASSIFICATION</label>
+          </div>
+          <br>
+          <div id="classificationOptions" style="display: none;">
+            <input id="ptn" name="class" type="radio" value="pro to non-prof">
+            <label for="class">PROF TO NON-PROF</label>
+            <br>
+            <input id="ntn" name="class" type="radio" value="non-prof to pro">
+            <label for="class">NON-PROF TO PRO</label>
+            <br>
+            <br>
+          </div>
+          <div>
+            <input id="foreign-con" name="toa" type="checkbox" value="foreign conversion">
+            <label for="toa">D. FOREIGN LIC CONVERSION</label>
+          </div>
+          <br>
+          <div>
+            <input id="renewal" name="toa" type="checkbox" value="renewal">
+            <label for="toa">E. RENEWAL</label>
+          </div>
+          <br>
+          <div>
+            <input id="restriction" name="toa" type="checkbox" value="additional restriction code">
+            <label for="toa">F. ADDITIONAL RESTRICTION CODE</label>
+          </div>
+          <br>
+          <div>
+            <input id="duplicate" name="toa" type="checkbox" value="duplicate">
+            <label for="toa">G. DUPLICATE</label>
+          </div>
+          <br>
+          <div>
+            <input id="revision" name="toa" type="checkbox" value="revision of records">
+            <label>H. REVISION OF RECORDS</label>
+          </div>
+          <div id="revisionOptions" style="display: none;">
+            <br>
+            <input id="change-address" name="toa" type="checkbox" value="change address">
+            <label for="toa">CHANGE ADDRESS</label>
+            <br>
+            <input id="change-status" name="toa" type="checkbox" value="change civil status">
+            <label for="toa">CHANGE CIVIL STATUS</label>
+            <br>
+            <input id="change-name" name="toa" type="checkbox" value="change name">
+            <label for="toa">CHANGE NAME</label>
+            <br>
+            <input id="change-birth" name="toa" type="checkbox" value="change date of birth">
+            <label for="toa">CHANGE DATE OF BIRTH</label>
+            <br>
+            <input id="change-others" name="toa" type="checkbox" value="others">
+            <label for="toa">OTHERS</label>
+          </div>
+        </div>
+      </section>
+
+      <section class="tla">
+
+        <label><b>TYPE OF LICENSE APPLIED FOR (TLA)</b></label>
+        <div>
+          <div>
+            <input id="student-permit" name="tla" type="radio" value="student permit">
+            <label for="tla">STUDENT PERMIT</label>
+          </div>
+          <br>
+          <div>
+            <input id="non-pro" name="tla" type="radio" value="non-pro">
+            <label for="tla">NON-PROFESSIONAL</label>
+          </div>
+          <br>
+          <div>
+            <input id="pro" name="tla" type="radio" value="pro">
+            <label for="tla">PROFESSIONAL</label>
+          </div>
+          <br>
+          <div>
+            <input id="conductor" name="tla" type="radio" value="pro">
+            <label for="tla">CONDUCTOR</label>
+          </div>
+        </div>
+      </section>
+
+      <section class="dsa">
+        <b>DRIVING SKILL ACQUIRED OR WILL BE ACQUIRED THRU (DSA)</b>
+        <div>
+          <div>
+            <input id="driving-school" name="dsa" type="radio" value="driving school">
+            <label for="dsa">DRIVING SCHOOL</label>
+          </div>
+          <br>
+          <div>
+            <input id="private" name="dsa" type="radio" value="licensed private person">
+            <label for="dsa">LICENSED PRIVATE PERSON</label>
+          </div>
+        </div>
+      </section>
+
+      <section class="ea">
+        <br>
+        <label><b>EDUCATIONAL ATTAINMENT (EA)</b></label>
+        <br>
+        <div>
+          <div>
+            <input id="informal" name="ea" type="radio" value="informal schooling">
+            <label for="ea">INFORMAL SCHOOLING</label>
+          </div>
+          <br>
+          <div>
+            <input id="elementary" name="ea" type="radio" value="elementary">
+            <label for="ea">ELEMENTARY</label>
+          </div>
+          <br>
+          <div>
+            <input id="high school" name="ea" type="radio" value="high school">
+            <label for="ea">HIGH SCHOOL</label>
+          </div>
+          <br>
+          <div>
+            <input id="vocational" name="ea" type="radio" value="vocational">
+            <label for="ea">VOCATIONAL</label>
+          </div>
+          <br>
+          <div>
+            <input id="college" name="ea" type="radio" value="college">
+            <label for="ea">COLLEGE</label>
+          </div>
+          <br>
+          <div>
+            <input id="post-grad" name="ea" type="radio" value="post graduate">
+            <label for="ea">POST GRADUATE</label>
+          </div>
+        </div>
+        <br>
+      </section>
+
+      <section class="more">
+        <br>
+        <label><b>BLOOD TYPE</b></label>
+        <select id="bloodType" name="bloodType">
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+        <br>
+
+        <label><b>ORGAN DONOR</b></label>
+        <div>
+          <div>
+            <input id="organYes" name="organDonor" type="radio" value="yes">
+            <label for="organDonor">YES</label>
+          </div>
+          <div>
+            <input id="organNo" name="organDonor" type="radio" value="no">
+            <label for="organDonor">NO</label>
+          </div>
+        </div>
+        <br>
+
+        <label><b>CIVIL STATUS (CS)</b></label>
+        <select id="civilStatus" name="civilStatus">
+          <option value="SINGLE">SINGLE</option>
+          <option value="MARRIED">MARRIED</option>
+          <option value="WIDOW/ER">WIDOW/ER</option>
+          <option value="SEPARATED">SEPARATED</option>
+        </select>
+        <br>
+
+        <label><b>HAIR</b></label>
+        <select id="hair" name="hair">
+          <option value="BLACK">BLACK</option>
+          <option value="BROWN">BROWN</option>
+          <option value="BLONDE">BLONDE</option>
+          <option value="GRAY">GRAY</option>
+          <option value="OTHERS">OTHERS</option>
+        </select>
+        <br>
+        <div id="hairOther" style="display: none;">
+          <input id="hairSpecify" name="hairSpecify" type="text" placeholder="Specify">
+          <br>
+          <br>
+        </div>
+
+        <label><b>EYES</b></label>
+        <select id="eyeColor" name="eyeColor">
+          <option value="BLACK">BLACK</option>
+          <option value="BROWN">BROWN</option>
+          <option value="GRAY">GRAY</option>
+          <option value="OTHERS">OTHERS</option>
+        </select>
+        <br>
+        <div id="eyeOther" style="display: none;">
+          <input id="eyeSpecify" name="eyeSpecify" type="text" placeholder="Specify">
+          <br>
+          <br>
+        </div>
+
+        <label><b>BUILT</b></label>
+        <select id="built" name="built">
+          <option value="LIGHT">LIGHT</option>
+          <option value="MEDIUM">MEDIUM</option>
+          <option value="HEAVY">HEAVY</option>
+        </select>
+        <br>
+
+        <label><b>COMPLEXION</b></label>
+        <select id="complexion" name="complexion">
+          <option value="LIGHT">LIGHT</option>
+          <option value="FAIR">FAIR</option>
+          <option value="DARK">DARK</option>
+        </select>
+        <br>
+      </section>
+
+      <section class="birthPlace">
+        <label><b>BIRTHPLACE</b></label>
+        <select id="provinceBirthplace" name="province">
+          <option value="">Select Province</option>
+          <option value="Batangas">Batangas</option>
+          <option value="Cavite">Cavite</option>
+          <option value="Laguna">Laguna</option>
+          <option value="Quezon">Quezon</option>
+          <option value="Rizal">Rizal</option>
+          <option value="Metropolitan Manila">Metropolitan Manila</option>
+        </select>
+        <select id="cityBirthplace" name="city">
+          <option value="">Select a province first</option>
+        </select>
+      </section>
+
+      <section class="fatherName">
+        <br>
+        <label><b>FATHER'S NAME</b></label>
+        (indicate even if deceased)
+        <br> <br>
+        <input id="familyFather" name="familyFather" type="text" placeholder="Father's Family Name">
+        <br>
+        <input id="firstFather" name="firstFather" type="text" placeholder="Father's First Name">
+        <br> 
+        <input id="middleFather" name="middleFather" type="text" placeholder="Father's Middle Name">
+        <br>
+      </section>
+
+      <section class="motherName">
+        <br>
+        <label><b>MOTHER'S NAME</b></label>
+        (indicate even if deceased)
+        <br> <br>
+        <input id="familyMother" name="familyMother" type="text" placeholder="Mother's Family Name">
+        <br>
+        <input id="firstMother" name="firstMother" type="text" placeholder="Mother's First Name">
+        <br>  
+        <input id="middleMother" name="middleMother" type="text" placeholder="Mother's Middle Name">
+        <br>
+      </section>
+
+      <section class="spouseName">
+        <br>
+        <label><b>SPOUSE NAME</b></label>
+        (indicate even if deceased)
+        <br> <br>
+        <input id="familySpouse" name="familySpouse" type="text" placeholder="Spouse's Family Name">
+        <br>
+        <input id="firstSpouse" name="firstSpouse" type="text" placeholder="Spouse's First Name">
+        <br> 
+        <input id="middleSpouse" name="middleSpouse" type="text" placeholder="Spouse's Middle Name">
+        <br>
+      </section>
+
+      <section class="employersName">
+        <label><b>EMPLOYER'S BUSINESS NAME</b></label>
+        <input id="employersBusinessName" name="employersBusinessName" type="text" placeholder="Business Name">
+        <input id="employersNum" name="employersNum" type="tel" pattern="[0-9]{7}" placeholder="Telephone Number">
+
+      </section>
+
+      <section class="employersAddress">
+        <br>
+        <label for="employersAdd"><b>EMPLOYER'S BUSINESS ADDRESS</b></label> <br>
+        <input id="streetNumEmployer" name="streetNumEmployer" type="text" placeholder="Street Number">
+        <br>
+        <input id="streetEmployer" name="streetEmployer" type="text" placeholder="Street Name">
+        <br>  
+        <select id="provinceEmployer" name="province">
+          <option value="">Select Province</option>
+          <option value="Batangas">Batangas</option>
+          <option value="Cavite">Cavite</option>
+          <option value="Laguna">Laguna</option>
+          <option value="Quezon">Quezon</option>
+          <option value="Rizal">Rizal</option>
+          <option value="Metropolitan Manila">Metropolitan Manila</option>
+        </select>
+        <br> 
+        <select id="cityEmployer" name="city">
+          <option value="">Select a province first</option>
+        </select>
+      </section>
+
+      <section class="previousName">
+        <p>FILL THIS UP ONLY IF YOUR NAME ABOVE IS DIFFERENT FROM YOUR NAME IN PREVIOUS LICENSE</p>
+        <label><b>PREVIOUS NAME</b></label> <br>
+        <input id="familyPrevious" name="familyPrevious" type="text" placeholder="Previous Family Name">
+        <br>
+        <input id="firstPrevious" name="firstPrevious" type="text" placeholder="Previous First Name">
+        <br> 
+        <input id="middlePrevious" name="middlePrevious" type="text" placeholder="Previous Middle Name">
+      </section>
+
+      <section class="signature">
+        <p>THIS IS TO CERTIFY THAT THE INFORMATION I HAVE GIVEN IS TRUE AND CORRECT.</p>
+        <label for="signatureApplicant"><b>SIGNATURE OF APPLICANT</b></label> <br>
+        <input id="signatureApplicant" name="signatureApplicant" type="file" accept="image/png, image/jpeg" >
+      </section>
+
+      <section class="submit">
+        <input id="submit" type="submit">
+      </section>
+
+    </form>
+  </div>
+
+  <script src="LTO.js"></script>
+</body>
+</html>

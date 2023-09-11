@@ -1,0 +1,299 @@
+body, input, select {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12pt;
+}
+
+body {
+  background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(233, 233, 233));
+}
+
+input {
+  color: rgb(47, 47, 47);
+}
+
+b {
+  color: rgb(0,51,102);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: 13pt;
+}
+
+.title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  background-color: rgb(0,51,102);
+  color: white;
+  height: 40px;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 0 10px 0;
+  border: 2px solid rgb(0,51,102);
+  height: 200px;
+}
+
+.loc {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0 10px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 270px;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 25px 0 25px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 200px;
+}
+
+.cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 300px 0 300px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 30px 0 30px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 420px;
+}
+
+.toa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0 20px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 520px;
+}
+
+.tla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0 20px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 220px;
+}
+.dsa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0 20px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 170px;
+}
+
+.ea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0 20px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 300px;
+}
+
+.more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0 20px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 600px;
+}
+
+.birthPlace {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0 20px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 150px;
+}
+
+.fatherName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0 20px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 200px;
+}
+
+.motherName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0 20px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 200px;
+}
+
+.spouseName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0 20px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 200px;
+}
+
+.employersName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 0 20px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 150px;
+}
+
+.employersAddress{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0 30px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 200px;
+}
+
+.previousName {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0 30px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 250px;
+}
+
+.previousName p, .signature p {
+  width: 450px;
+  text-align: center;
+}
+
+.signature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0 30px 0;
+  border-color: rgb(0,51,102);;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  height: 150px;
+  margin-bottom: 40px;
+}
+
+.submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0 10px 0;
+  height: 50px;
+}
+
+#submit {
+  font-weight: bold;
+  color: black;
+  margin-bottom: 40px;
+  padding: 10px 20px;
+  color: rgb(0,51,102);
+  transition: ease-in-out .15s;
+}
+
+#submit:hover {
+  background-color: rgb(0,51,102);
+  color: white;
+} 
+
+#signatureApplicant {
+  width: 105px;
+}
+
+@media (width <= 1060px) {
+  .cont {
+  margin: 0 100px 0 100px;
+}
+
+  .previousName p{
+    width: 170px;
+
+  }
+
+  .signature p{
+    width: 170px;
+  }
+
+  .signature {
+    height: 200px;
+  }
+}
